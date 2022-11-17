@@ -165,7 +165,8 @@ small {
 /*popup*/
 
 .popup {
-	visibility: hidden;
+	display: none;
+	/*visibility: hidden;*/
 	width: 600px;
 	height: 290px;
 	text-align: center;
@@ -183,7 +184,8 @@ small {
 }
 
 .popup.active {
-	visibility: visible;
+	display: block;
+	/*visibility: visible;*/
 	z-index: 1;
 	opacity: 1;
 	transition: .2s;
@@ -247,6 +249,8 @@ small {
 
 @media only screen and (max-width: 800px) {
 	.container-register {
+		width: 100%;
+		height: 100vh;
 		justify-content: center;
 	}
 
@@ -258,5 +262,10 @@ small {
 	.form-register {
 		width: 80%;
 		margin-top: -20px;
+	}
+
+	.popup {
+		width: 80%;
+		height: auto;
 	}
 }
