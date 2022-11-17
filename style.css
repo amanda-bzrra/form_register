@@ -1,0 +1,262 @@
+/* style global*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+a,
+input,
+label,
+p,
+small {
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	height: 100vh;
+	width: 100%;
+	background: rgb(252, 240, 229);
+	background: linear-gradient(35deg, rgba(252, 240, 229, 1) 33%, rgba(250, 231, 231, 1) 62%, rgba(255, 202, 202, 1) 88%, rgb(253, 230, 230) 100%);
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+img {
+	width: 400px;
+}
+
+
+/* style Register*/
+
+.container-register {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 120px auto;
+	/*position: absolute;
+	top: 20%;
+	left: 26%;*/
+	width: 800px;
+	max-width: 80%;
+	height: auto;
+	background: #f7fafc;
+	border-radius: 4px;
+	-webkit-box-shadow: 5px 9px 8px -2px #B3B3B3;
+	box-shadow: 5px 9px 8px -2px #B3B3B3;
+	padding-bottom: 100px;
+}
+
+.container-register img {
+	margin-top: 60px;
+}
+
+.container-register h2 {
+	color: #6a7a8b;
+	text-align: center;
+	text-transform: capitalize;
+	letter-spacing: -1px;
+	margin-bottom: 16px;
+}
+
+.form-register {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	margin-top: 5px;
+	padding: 16px;
+	height: 400px;
+	border-left: 1px solid #e9e6e6;
+}
+
+.form-register div {
+	display: flex;
+	flex-direction: column;
+	margin-top: 5px;
+}
+
+.form-register label {
+	color: #9b9999;
+	margin: 0 0 2px 2px;
+}
+
+.form-register input {
+	border: 1px solid #e9e6e6;
+	border-radius: 4px;
+	padding: 10px 5px;
+	outline: none;
+}
+
+.form-register input::placeholder {
+	font-size: 16px;
+	font-style: italic;
+	color: #dbd8d8;
+	opacity: 0.8;
+}
+
+/*Icons - message validation*/
+
+small {
+	margin-left: 5px;
+	color: #f8572d;
+	visibility: hidden;
+}
+
+.form-register .form-control {
+	position: relative;
+}
+
+.form-register .form-control i {
+	position: absolute;
+	top: 30px;
+	right: 5px;
+}
+
+.form-register .form-control .fa-circle-exclamation {
+	color: #df2a33;
+	visibility: hidden;
+}
+
+.form-register .form-control .fa-circle-check {
+	color: #1dac10;
+	visibility: hidden;
+}
+
+.form-register .form-control.form-control.sucess .fa-circle-check {
+	visibility: visible;
+}
+
+.form-control.sucess input {
+	border: 1px solid #1dac10;
+}
+
+.form-register .form-control.form-control.error .fa-circle-exclamation {
+	visibility: visible;
+}
+
+.form-control.error input {
+	border: 1px solid #df2a33;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+
+.btn {
+	width: 100%;
+	margin: 10px auto;
+	padding: 12px 0;
+	border: none;
+	border-radius: 4px;
+	background-color: #f8572d;
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+}
+
+.btn:hover {
+	background-color: #1dac10;
+}
+
+/*popup*/
+
+.popup {
+	visibility: hidden;
+	width: 600px;
+	height: 290px;
+	text-align: center;
+	color: #9b9999;
+	background: #fff;
+	border-radius: 4px;
+	position: absolute;
+	opacity: 0;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0 20px 20px;
+	-webkit-box-shadow: 5px 9px 8px -2px #B3B3B3;
+	box-shadow: 5px 9px 8px -2px #B3B3B3;
+}
+
+.popup.active {
+	visibility: visible;
+	z-index: 1;
+	opacity: 1;
+	transition: .2s;
+}
+
+
+.popup i {
+	color: #1dac10;
+	font-size: 80px;
+	padding: 20px 0;
+}
+
+.popup h1 {
+	margin-bottom: 16px;
+}
+
+.popup h1::after {
+	content: '';
+	display: block;
+	width: 20%;
+	height: 1px;
+	margin: 5px auto;
+	background: #e9e6e6;
+}
+
+.popup p {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.popup .button {
+	display: block;
+	width: 120px;
+	border: none;
+	margin: 0 auto;
+	padding: 8px 0;
+	background: #9b9999;
+	color: #fff;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.popup .button:hover {
+	background: #1dac10;
+}
+
+.container-register.active {
+	filter: blur(3px);
+	pointer-events: none;
+	user-select: none;
+}
+
+/*Media Query*/
+
+@media only screen and (max-width: 990px) {
+	.container-register img {
+		max-width: 320px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.container-register {
+		justify-content: center;
+	}
+
+	.container-register img {
+		margin-top: 10px;
+		width: 100%;
+	}
+
+	.form-register {
+		width: 80%;
+		margin-top: -20px;
+	}
+}

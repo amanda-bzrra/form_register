@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="favicon.ico" />
+	<title>User Register</title>
+</head>
+
+<body>
+	<div class="popup">
+		<i class="fa-solid fa-circle-check"></i>
+		<h1>Thank You!</h1>
+		<p>Your data was registered successfully!</p>
+		<a onclick="reloadPage()" class="button">OK</a>
+	</div>
+
+	<div class="container-register">
+		<div>
+			<img src="image/building_hashtag.png" alt="form image">
+		</div>
+		<form id="form-register" class="form-register">
+			<h2>Register user</h2>
+			<div class="form-control">
+				<label id="labelName">Name:</label>
+				<input id="name" type="text" required class="inputs required" oninput="nameValidate()">
+				<i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+				<i class="fa-solid fa-circle-check"></i>
+				<small>Error message</small>
+			</div>
+			<div class="form-control">
+				<label id="labelEmail">Email:</label>
+				<input id="email" type="email" placeholder="name@email.com " class="inputs required"
+					oninput="emailValidate()">
+				<i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+				<i class="fa-solid fa-circle-check"></i>
+				<small>Error message</small>
+			</div>
+			<div class="form-control">
+				<label id="labelPassword">Password:</label>
+				<input id="password" type="password" class="inputs required" oninput="passwordValidate()">
+				<i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+				<i class="fa-solid fa-circle-check"></i>
+				<small>Error message</small>
+			</div>
+			<div class="form-control">
+				<label id="labelConfirmPassword">Confirm Password:</label>
+				<input id="confirmPassword" type="password" class="inputs required" oninput="comparePassword()">
+				<i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+				<i class="fa-solid fa-circle-check"></i>
+				<small>Error message</small>
+			</div>
+
+			<button type="submit" class="btn">Register</button>
+		</form>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
