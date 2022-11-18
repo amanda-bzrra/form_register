@@ -235,16 +235,16 @@ small {
 	user-select: none;
 }
 
+
 /*Media Query*/
 
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 998px) {
 	.container-register img {
 		max-width: 320px;
 	}
 }
 
-@media only screen and (max-width: 800px) {
-	body {}
+@media only screen and (max-width: 880px) {
 
 	.container-register {
 		max-width: 100%;
@@ -267,5 +267,11 @@ small {
 	.popup {
 		width: 80%;
 		height: auto;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.form-register {
+		width: 95%;
 	}
 }
